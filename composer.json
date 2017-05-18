@@ -1,0 +1,40 @@
+{
+    "name": "drupal/opencrm",
+    "description": "OpenCRM is a distribution for building Drupal Native CRM sites.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Drupal\\opencrm\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\Tests\\opencrm\\": "tests/src"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@composer drupal-scaffold"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    },
+    "extra": {
+        "patches": {}
+    },
+    "require": {
+        "cweagans/composer-patches": "^1.5.0",
+        "composer/installers": "^1.0",
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "drupal/core": "8.3.2",
+        "drupal/contacts": "^1.0"
+    }
+}
