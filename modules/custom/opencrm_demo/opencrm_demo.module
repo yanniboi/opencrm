@@ -1,0 +1,5 @@
+<?php
+
+function demo_content_test() {
+  dpm('cheese');
+}
