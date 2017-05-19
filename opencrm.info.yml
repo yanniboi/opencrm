@@ -4,8 +4,13 @@ description: 'OpenCRM install profile.'
 project: 'opencrm'
 core: '8.x'
 dependencies:
+  - block
   - config
+  - file
+  - help
+  - image
   - system
+  - toolbar
   - user
 themes:
   - seven
